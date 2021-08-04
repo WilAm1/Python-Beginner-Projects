@@ -8,6 +8,8 @@ def game():
     rand_num = randint(1,100)
     guess = 0
     tries = 0
+    print("Welcome to a Higher Lower Guessing Game! This is a simple game where you guess what number" \
+        " the computer has!")
     while rand_num != guess:
         guess = int(input("Guess the number from 1 to 100 "))
         tries += 1
@@ -20,7 +22,7 @@ def game():
             print(f"That's right! Congratulations! It took you {tries} tries!")
         
     if input('Do you want to play again? enter "yes" to continue  ') == 'yes':
-        return True
+        game()
     
     return
 
