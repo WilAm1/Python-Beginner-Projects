@@ -4,12 +4,15 @@ from random import randint
 
 rand_num = randint(1,100)
 
-guess = input("Guess the number from 1 to 100")
+guess = 0
 
-if guess > rand_num:
-    print("Lower!")
-elif guess < rand_num:
-    print("Higher")
-else:
-    print("That's right! Congratulations!")
+while rand_num != guess:
+    guess = int(input("Guess the number from 1 to 100 "))
+
+    if guess > rand_num:
+        print("Lower!")
+    elif guess < rand_num:
+        print("Higher!")
+    else:
+        print("That's right! Congratulations!")
 
