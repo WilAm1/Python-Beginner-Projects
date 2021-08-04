@@ -2,17 +2,26 @@
 
 from random import randint
 
-rand_num = randint(1,100)
 
-guess = 0
 
-while rand_num != guess:
-    guess = int(input("Guess the number from 1 to 100 "))
+def game():
+    rand_num = randint(1,100)
+    guess = 0
+    tries = 0
+    while rand_num != guess:
+        guess = int(input("Guess the number from 1 to 100 "))
+        tries += 1
 
-    if guess > rand_num:
-        print("Lower!")
-    elif guess < rand_num:
-        print("Higher!")
-    else:
-        print("That's right! Congratulations!")
+        if guess > rand_num:
+            print("Lower!")
+        elif guess < rand_num:
+            print("Higher!")
+        else:
+            print(f"That's right! Congratulations! It took you {tries} tries!")
+        
+    if input('Do you want to play again? enter "yes" to continue  ') == 'yes':
+        return True
+    
+    return
 
+game()
