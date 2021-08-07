@@ -2,11 +2,13 @@
 a program that selects a random word 
 and then allows the user to guess it in a game of hangman."""
 
+
 from hangman_wordbank import HANGMANPICS, words 
+from random import choice
 
-word = 'hangman'
+word = choice(words)
+
 blank_word = "_"*len(word)
-
 
 blank_word_list = [i for i in blank_word]
 lives = 6
