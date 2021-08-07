@@ -2,6 +2,8 @@
 a program that selects a random word 
 and then allows the user to guess it in a game of hangman."""
 
+
+
 word = 'hangman'
 blank_word = "_"*len(word)
 
@@ -10,6 +12,7 @@ blank_word_list = [i for i in blank_word]
 lives = 5
 playing = True
 
+welcome_text = "Welcome to hangman game! Guess a letter to complete the world!"
 while playing:
     
     print(f"Lives : {lives}")
