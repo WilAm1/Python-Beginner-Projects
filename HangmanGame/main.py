@@ -10,10 +10,12 @@ blank_word_list = [i for i in blank_word]
 
 if guess_letter in word:
     print("noice")
-    for index, letter in enumerate(blank_word_list):
-        if index == word.index(guess_letter):
-            blank_word_list[index] = guess_letter
-            blank_word = ''.join(blank_word_list)
-            continue
+    for index, letter in enumerate(word):
+        if letter == guess_letter:
+            blank_word_list[index] = letter
+            print(blank_word_list)
+    blank_word = ''.join(blank_word_list)
+
+            
             
     print(blank_word)
