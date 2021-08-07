@@ -7,6 +7,7 @@ blank_word = "_"*len(word)
 print('The word:  ',blank_word)
 guess_letter = input("Guess the letter: ").lower()
 blank_word_list = [i for i in blank_word]
+
 if guess_letter in word:
     print("noice")
     for index, letter in enumerate(blank_word_list):
