@@ -38,7 +38,7 @@ def game(lives):
             else:
                 print("You win!")
 
-            print(f"Game Over! The word is {word}")
+            print(f"Game Over! The word is '{word}' !")
             play_again = input("Do you want to play again? type 'Yes' to continue  ").lower()
             if play_again == 'yes':
                 game(LIVES)
