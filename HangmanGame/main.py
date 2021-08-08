@@ -8,9 +8,10 @@ from random import choice
 
 
 
-def game(lives):
+def game(lives,word_list):
+    """Run the main hangman game. """
     playing = True
-    word = choice(words)
+    word = choice(word_list)
     blank_word = "_"*len(word)
     blank_word_list = [i for i in blank_word]
     while playing:
@@ -48,4 +49,4 @@ welcome_text = "Welcome to hangman game! Guess a letter to complete the world!"
 
 LIVES = 6
 
-game(lives=LIVES)
+game(lives=LIVES,word_list=words)
