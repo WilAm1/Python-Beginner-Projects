@@ -26,23 +26,17 @@ def isPrime(num):
             return False
     return True
 
-print(isPrime(523),'is it?')
 for n in range(10,1001):
     n_string = str(n)
     if '1' in n_string or '7' in n_string:
         continue
-    if sum([int(digit) for digit in n_string]) > 10:
+    elif sum([int(digit) for digit in n_string]) > 10:
         continue
-    if ((int(n_string[0]) + int(n_string[1])) % 2 ==0):
+    elif ((int(n_string[0]) + int(n_string[1])) % 2 ==0):
         continue
     second  = int(n_string[-2])
     last = int(n_string[-1])
     if isPrime(n):
         if second %2 == 0 and second > 1:
-            
             if int(n_string[-1]) == len(n_string):
-                
-                
                 print(n)
-
-
